@@ -1,6 +1,6 @@
 "use client";
 
-import FormPost from '@/components/FormPosts';
+import FormPost from '@/components/FormPost';
 import { FormInputPost } from '@/types';
 import React from 'react'
 import { SubmitHandler } from 'react-hook-form';

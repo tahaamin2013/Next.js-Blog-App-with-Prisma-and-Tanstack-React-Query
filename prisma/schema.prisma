@@ -14,7 +14,7 @@ datasource db {
 model Tag {
   id String @id @default(cuid())
   name String @db.VarChar(100)
-  posts Post[]
+  Post Post[]
 }
 
 model Post {
@@ -23,6 +23,6 @@ model Post {
   content String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  tag Tag @relation(fields: [tagid], references: [id])
-  tagid String
+  tagId String
+  tag Tag @relation(fields: [tagId], references: [id])
 }
