@@ -10,10 +10,13 @@ import { SubmitHandler, useForm } from "react-hook-form";
 interface FormPostProps {
   submit: SubmitHandler<FormInputPost>
   isEditing: boolean
+  initialValue?: FormInputPost
 }
 
-const FormPost: FC<FormPostProps> = ({ submit, isEditing }) => {
-    const {register,handleSubmit} = useForm<FormInputPost>();
+const FormPost: FC<FormPostProps> = ({ submit, isEditing, initialValue }) => {
+    const {register,handleSubmit} = useForm<FormInputPost>({
+      defaultValues: initialValue,
+    });
     
     // fetch list tags
 
